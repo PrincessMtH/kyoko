@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "NotoSansCJKjp";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.otf) format('opentype');
+}
+
+body{
+  font-family: "NotoSansCJKjp","Segoe UI",Arial,sans-serif;
+  font-size: 20px;
+}
+
+#wrap{
+  width:960px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+#header{
+  font-size: 40px;
+}
