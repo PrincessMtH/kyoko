@@ -22,9 +22,9 @@
 </div>
 <script>
   function send() {
-  if(document.getElementById("text").value) {
+  if(document.getElementById("message").value) {
     var http = new XMLHttpRequest();
-    var msg = document.getElementById("text").value;
+    var msg = document.getElementById("message").value;
     http.open('POST', 'https://canary.discordapp.com/api/webhooks/342671427918364682/V5JIujBIyiOEqHh248lAgg-VJm2kgMj72K8NPrVtMTx1NvdPrMmF2eAUWZ5VA_nB_EHy/slack', true);
     http.setRequestHeader("Content-type", "application/json");
     http.send('{"text":"'+msg+'"}');
