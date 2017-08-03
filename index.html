@@ -1,21 +1,35 @@
 <html>
 <head>
-<title>Jerry Temporary</title>
-<meta name="description" content="Jerry Temporary by Paul McCartney"/>
-<meta name="keywords" content="Paul McCartney, Jerry Temporary, McCartney II, The Beatles"/>
-<meta name="author" content="Paul McCartney">
-<meta property="og:type" content="music.song">
-<meta property="og:title" content="Jerry Temporary">
-<meta property="og:url" content="http://www.useless.accountants/">
-<meta property="og:image" content="http://www.useless.accountants/android-chrome-512x512.png">
-<meta property="music:album:url" content="http://play.google.com/music/preview/Blmqyfxklr3f4wyb56u4nvixqli">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <title>sound9</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="margin:0;"><iframe src="https://www.youtube.com/embed/dm2RF8ACVrw" frameborder="0" allowfullscreen style="width:100%; height:100%;"></iframe></body>
+<body>
+<div id="wrap">
+  <div id="header">
+  sound9
+  </div>
+  <div id="body">
+    Talk as Kyōko! Please be nice.
+    <input id="message" type="text" placeholder="Message">
+    <button id="send" onclick="send()">Send</button>
+    Everyone is Kyōko, so noone is Kyōko.<br>That's what I think.
+  </div>
+  <div id="footer">
+    join the <a href="http://discordapp.com/">Discord</a> server: <a href="https://discord.gg/bAurvPh">invite link</a><br>
+    contact: <a href="mailto:contact@kyoko.press">contact@kyoko.press</a>
+  </div>
+</div>
+<script>
+  function send() {
+  if(document.getElementById("text").value) {
+    var http = new XMLHttpRequest();
+    var msg = document.getElementById("text").value;
+    http.open('POST', 'https://canary.discordapp.com/api/webhooks/342671427918364682/V5JIujBIyiOEqHh248lAgg-VJm2kgMj72K8NPrVtMTx1NvdPrMmF2eAUWZ5VA_nB_EHy/slack', true);
+    http.setRequestHeader("Content-type", "application/json");
+    http.send('{"text":"'+msg+'"}');
+  }else alert("Cannot send an empty message!");
+  }
+</script>
+</body>
 </html>
